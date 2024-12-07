@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            margin: 0;
+            padding: 10px;
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .course-form {
+            margin-top: 20px;
+        }
+        .course-form input, .course-form select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .course-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .course-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Manage Courses</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="login.html">Logout</a>
+</nav>
+
+<main>
+    <div class="content">
+        <h2>Course Management</h2>
+        <p>Use this system to manage course details efficiently. You can add new courses, update existing courses, and schedule classes.</p>
+
+        <div class="course-form">
+            <h3>Add New Course</h3>
+            <form>
+                <label for="courseName">Course Name:</label>
+                <input type="text" id="courseName" name="courseName" required>
+
+                <label for="instructorName">Instructor:</label>
+                <select id="instructorName" name="instructorName" required>
+                    <option value="" disabled selected>Select an instructor</option>
+                    <option value="Prof. Smith">Prof. Smith</option>
+                    <option value="Prof. Johnson">Prof. Johnson</option>
+                    <option value="Prof. Williams">Prof. Williams</option>
+                </select>
+
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+
+                <label for="classTime">Class Time:</label>
+                <input type="time" id="classTime" name="classTime" required>
+
+                <button type="submit">Add Course</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
